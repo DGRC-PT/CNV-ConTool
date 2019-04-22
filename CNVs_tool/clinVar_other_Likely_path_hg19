@@ -1,0 +1,4 @@
+#Release Date: 2015-01-21
+()	16	76935309	90354753	Translocation	3/3 100.0%	Landrum_et_al_2016	https://www.ncbi.nlm.nih.gov/medgen/C0036572	26582918	arr[GRCh37]16q23.1q24.3(76935309-90354753)
+()	5	0	8180513	Translocation	1/3 33.333%	Landrum_et_al_2016	NA	26582918	arr[GRCh37]5p15.33p15.31(0-8180513)
+RCV000240913,RCV0002409(13)	7	81880896	82156396	Translocation	3/3 100.0%	Landrum_et_al_2016	https://www.ncbi.nlm.nih.gov/medgen/C0036572	26582918	arr[GRCh37]7q21.11(81880896-82156396)13

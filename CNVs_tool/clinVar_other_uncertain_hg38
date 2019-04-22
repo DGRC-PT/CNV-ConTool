@@ -1,0 +1,4 @@
+#Release Date: 2015-01-21
+nsv11974(22)	X	154030654	154030785	indel_Uncertain significance	3/3 100.0%	Landrum_et_al_2016	https://www.ncbi.nlm.nih.gov/medgen/C0035372	26582918	arr[GRCh38]Xq28(154030654-154030785)22
+RCV0001686(83)	X	154030752	154031305	indel_Uncertain significance	0/3 0.0%	Landrum_et_al_2016	https://www.ncbi.nlm.nih.gov/medgen/CN169374	26582918	arr[GRCh38]Xq28(154030752-154031305)83
+RCV0002210(83)	18	3168816	3168981	undetermined variant_Uncertain significance	0/3 0.0%	Landrum_et_al_2016	https://www.ncbi.nlm.nih.gov/medgen/CN169374	26582918	arr[GRCh38]18p11.31(3168816-3168981)83
