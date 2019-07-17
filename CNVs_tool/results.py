@@ -13,7 +13,7 @@ import cgi
 import cgitb
 import itertools
 from collections import OrderedDict
-import cross_deletions_with_dgv_results_V8
+import cross_deletions_with_dgv_results_V9
 cgitb.enable()
 
 def index():
@@ -87,6 +87,6 @@ indexx()
 cgitb.enable()
 form=cgi.FieldStorage()
 #print(form)
-cross_deletions_with_dgv_results_V8.indexx()
-cross_deletions_with_dgv_results_V8.exect(form)
-cross_deletions_with_dgv_results_V8.remake()
+cross_deletions_with_dgv_results_V9.indexx()
+cross_deletions_with_dgv_results_V9.exect(form)
+cross_deletions_with_dgv_results_V9.remake()
