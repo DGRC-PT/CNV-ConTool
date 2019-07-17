@@ -194,8 +194,27 @@ input[type=checkbox]
 		<p><input type="checkbox" name="dats[]" value="ClinVar" >ClinVar</p>
 		<p><input type="checkbox" name="dats[]" value="CoeCoop" >Coe & Cooper</p>
   </div>
-  <div class="container"><b> <p>Overlap cutoff (1-100)%:</b></p>
-    <p><input type="text" name="perc" value="70"></p></center><br>
+  <div class="tab" ><b>Type of overlap search:</b>
+    <p><select name="ovl" form="regForm" onchange="checkovl(this);"></p>
+      <option value="">Selection options</option>
+      <option value="mutual">Mutual Overlap</option>
+      <option value="full">Query comprised by the reference</option>
+      </select>
+  </div>
+  <div id="ifmutual" style="display: none;" align="center">
+   <p><font color="black" > Choosing Mutual Overlap, this tool will apply a mutual overlap cut-off on the search:</font></p>
+   <p><font color="black" > Database hits are only retrieved if percentages of overlap of query vs database and
+   database vs query are above the cut-off.</font></p>
+   <p><font color="black" > This applies to CNV queries and the respective affected genes.</font></p> 
+   <p><b>Overlap cutoff (1-100)%:</b></p>
+   <p><input type="text" name="perc" value="70"></p></center><br>
+		<br />
+  </div>
+  <div id="iffull" style="display: none;" align="center"> 
+   <p><font color="black" > Choosing query comprised by the reference, this tool will retrieve all database hits that covers 100% of the query,
+   independently of the database entry size.</font></p>  
+   <p><font color="black" > This applies to the CNV queries but not the respective affected genes, which are analyzed by default with the mutual overlap strategy.</font></p> <br>
+		<br /> 
   </div>
   <div class="tab"><center><b>Genes flanking region size:</b>
   <p><font color="grey" > Added to each side of the gene </font></p>
@@ -244,6 +263,15 @@ chr2:50843321-51318853
          document.getElementById("ifins").style.display = "block";
        }
      }
+	  function checkovl(vv){
+	   if (vv.value=="mutual"){
+	  	document.getElementById("ifmutual").style.display="block";
+		document.getElementById("iffull").style.display="none";
+	   } else if (vv.value == "full"){
+	  	document.getElementById("ifmutual").style.display="none";
+		document.getElementById("iffull").style.display="block";
+	  }
+	 }	  	
 </script> 
 <p><center><input type="submit" value="Submit"/p></center><br>
 <br />
@@ -256,7 +284,7 @@ Correspondance: <a href="mailto:doencasgenomicas@insa.min-saude.pt">Genomic Dise
 <center><aaa><a href="http://www.insa.min-saude.pt/category/areas-de-atuacao/genetica-humana/">Department of Human Genetics</a></aaa></center><br>
 <p>National Institute of Health Doutor Ricardo Jorge</p> </aaa></center>
 <center><img src="https://cld.pt/dl/download/1f715328-21eb-49bd-b04c-b46bf2f08c61/aaa.jpg" width=641 height=122 border=0 alt=""><br><br />
-<center><p><rodape>This file was last modified 13/12/2018</p></font></rodape>
+<center><p><rodape>This file was last modified 10/07/2019</p></font></rodape>
 </body>
 </html>"""
 
